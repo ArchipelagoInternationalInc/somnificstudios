@@ -92,7 +92,7 @@ function EmailCapture({ archetype }: { archetype: string }) {
         {status === "loading" ? "Sending…" : "Send it to me"}
       </button>
       {status === "error" && (
-        <span className="quiz-email-err">Couldn't send — try again.</span>
+        <span className="quiz-email-err">Couldn&apos;t send — try again.</span>
       )}
     </form>
   );
@@ -170,7 +170,7 @@ export default function SleepQuiz() {
 
           {/* Progress */}
           <div className="quiz-progress" aria-label={`${answeredCount} of 4 answered`}>
-            {QUESTIONS.map((q, i) => (
+            {QUESTIONS.map((q) => (
               <span
                 key={q.id}
                 className={`quiz-dot${answers[q.id] ? " filled" : ""}`}
